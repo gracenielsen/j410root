@@ -1,0 +1,323 @@
+
+<!doctype html>
+
+<html> 
+
+	
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Catch My Thrift | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar dissapear on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/logo.png" width="190" height="75" alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#num">Fast Fashion Fast Facts</a>
+        </li>
+	   <li>
+          <a href="#vid">Modern Thrifting</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Behind the Register</a>
+        </li>
+        <li>
+          <a href="#gal">A Day of Thrifting</a>
+			</li>
+      <li>
+          <a href="#home">About</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+	
+</div>
+    
+<!--animated welcome-->
+
+    
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">About</h2>
+<article>
+<p class="tab"> Why is thrift shopping so popular in college towns? San Luis Obispo is home to more than 10 thrift stores and this could be due to a higher demand by college students for low cost, environmentally friendly, and unique pieces. Scroll to explore motives, perspectives, and innovations in the world of local thrifting. 
+    </p>
+<p class="tab"><a href="#gal">Shopping</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">A Day of Thrifting</h2>
+<article><!--beginning of article-->
+<p class="tab">We followed a Cal Poly student on her Saturday afternoon thrifting treasure hunt at the local Goodwill.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:00pm. Mia von Knorring, a fourth-year biomedical engineering major, spends a weekend afternoon searching for hidden gems at Goodwill Central Coast in San Luis Obispo. "/>
+<img src="img/2.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:07pm. “I always like to start at the shirts and work my way around,” said Mia, “One of my secrets is to always look in the men’s section, it always has cool t-shirts and jackets.” Getting creative and seeing potential in pieces are important when thrifting clothes. ."/>
+<img src="img/3.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019.The central coast’s chapter of Goodwill began in Santa Cruz and spread to three different counties. The local Goodwill of San Luis Obispo is a staple in the community; it may be on the smaller side but it is always bustling with customers. "/>
+<img src="img/4.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:26pm. “I like to shop at Goodwill, Mission Thrift, and a few places in Morro Bay. It’s always fun to take part of the day to find some cool clothes or even other interesting things,”said Mia. Morro Bay boasts over 10 thrift stores and San Luis Obispo is home to around 12. "/>
+<img src="img/5.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019. Mia’s extra items hang outside the dressing room. Goodwill has a sign on the door requesting no more than five items at a time in the dressing rooms. This sign is in English and Spanish. "/>
+<img src="img/6.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:35pm. Mia twists and turns in a bright yellow floral dress. “If I can’t see myself wearing something five times or more, I’ll put it back,” Mia said about her habit of impulse buying. Most items of clothing at Goodwill are under $15. "/>
+<img src="img/7.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019. “Thrifting is one of the things that directly makes me feel like I’m lowering my impact on the environment. It bothers me that top brands for my demographic like H&M and Forever 21 don’t pay their workers a livable wage. So I consider it to be a hobby of mine that is low cost to me and the environment,” said Lucy Swift (not pictured), a fifth-year kinesiology major. "/>
+<img src="img/8.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:46pm. Mia contemplates a pair of shoes. One their website, Goodwill states they will only take certain donations: items such as baby toys, firearms, and mattresses are not permitted. "/>
+<img src="img/9.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:51pm. “College students love to come here to buy outfits for themed parties. Once, I had some kids come in who had to buy an entire outfit for $15 and then pin the receipt on their shirt to prove it and get into the party,” said Annette (right), a Goodwill employee. "/>
+<img src="img/10.jpg" width="100%" height="100%" alt="Saturday, October 12th, 2019, 2:54pm. Mia von Knorring, fourth year biomedical engineering major, walks back to her car after a successful thrifting spree. "/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Behind the Register</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+    
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">Behind the Register</h2>
+<article>
+  <p class="tab">Click on images to hear why local thrift store employees and volunteers love what they do. <br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>
+            
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+            
+<img src="img/rollover/1.jpg" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/1.jpg'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/3.jpg" class="rollover" alt="description" onMouseOver="this.src='img/rollover/4.jpg'" onMouseOut="this.src='img/rollover/3.jpg'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/5.jpg" class="rollover" alt="description" onMouseOver="this.src='img/rollover/6.jpg'" onMouseOut="this.src='img/rollover/5.jpg'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">Thrifting Online</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+    <!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.png">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">Modern Thrifting</h2>
+<article>
+<p class="tab">Art and design major Cristina Golubovich tells us how she's turned her passion into a profit and why everyone should try their hand at thrift shopping. </p>	
+<video width="100%" height="100%" poster="img/videostill.png" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">The Facts</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of new section-->
+<div class="row whiteBG">
+<h2 id="num">Fast Fashion Fast Facts</h2>
+<article>
+<p class="tab"></p>
+<script id="infogram_0_14d020d9-16a7-4582-8388-b8733f50fe33" title="fast fashion" src="https://e.infogram.com/js/dist/embed.js?yVF" type="text/javascript">
+</div>
+<!--end of new section-->
+	
+<!--beginning of footer-->
+    
+<footer>Catch My Thrift | San Luis Obispo, CA | <a href="mailto: grace@gmail.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 2019 | Site by Grace Nielsen 
+    
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
